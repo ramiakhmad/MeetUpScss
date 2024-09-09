@@ -155,6 +155,11 @@
         gap: 35px;
       }
     }
+    &__apps{
+      display: flex;
+      gap: 12px;
+
+    }
   }
   &__bottom {
     margin: 24px 20% 24px 20%;

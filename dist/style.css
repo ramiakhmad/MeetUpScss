@@ -162,6 +162,10 @@ p {
   align-items: center;
   gap: 35px;
 }
+.footer__followapps__apps {
+  display: flex;
+  gap: 12px;
+}
 .footer__bottom {
   margin: 24px 20% 24px 20%;
   display: flex;
