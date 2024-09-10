@@ -1,4 +1,4 @@
-@media (max-width: 430px) {
+@media (max-width: 390px) {
   .header__left__searchbar {
     display: none;
   }
@@ -183,7 +183,7 @@ p {
   color: white;
 }
 
-@media (max-width: 430px) {
+@media (max-width: 390px) {
   .header {
     gap: 60px;
   }
