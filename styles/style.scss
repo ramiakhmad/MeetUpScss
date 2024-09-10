@@ -685,44 +685,227 @@
       }
     }
   }
-  .made{
-    h3{
+  .made {
+    h3 {
       font-size: 20px;
-      font-weight:600 ;
+      font-weight: 600;
       line-height: 36px;
       margin-left: 24px;
       margin-top: 7px;
     }
-    #made{
+    #made {
       display: none;
     }
-    &__content{
+    &__content {
       margin-left: 24px;
       flex-direction: column;
       gap: 0;
-      &__post{
+      &__post {
         margin-bottom: 45px;
-        img{
+        img {
           width: 360px;
           height: 183px;
         }
-        h4{
+        h4 {
           font-size: 16px;
           font-weight: 600;
           line-height: 27px;
           max-width: 280px;
         }
-        p{
+        p {
           font-size: 12px;
           font-weight: 400;
           line-height: 23px;
           max-width: 355px;
         }
-        a{
+        a {
           font-size: 12px;
           font-weight: 400;
           line-height: 23px;
         }
+      }
+    }
+  }
+}
+@media (max-width: 430px) {
+  .intro {
+    flex-direction: column;
+    gap: 10px;
+    &__left {
+      h3 {
+        font-size: 25px;
+        font-weight: 700;
+        line-height: 30px;
+        max-width: 390px;
+      }
+      p {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
+        max-width: 390px;
+        color: #212121;
+      }
+      button {
+        display: none;
+      }
+    }
+    &__right {
+      img {
+        width: 220px;
+        height: 160px;
+      }
+    }
+  }
+
+  .events,
+  .online {
+    &__tabs {
+      margin-left: -90px;
+      gap: 0;
+      &__left {
+        gap: 5px;
+        h5 {
+          font-size: 20px;
+          font-weight: 600;
+          line-height: 25px;
+        }
+        a {
+          width: 170px;
+          height: 35px;
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 16px;
+          img {
+            width: 16px;
+            height: 16px;
+          }
+        }
+      }
+      &__right {
+        display: none;
+      }
+    }
+    &__content {
+      grid-template-columns: repeat(1, 1fr);
+      &__box {
+        h4 {
+          font-size: 12px;
+          font-weight: 500;
+          line-height: 18px;
+        }
+        a {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+
+  .explore {
+    margin-left: 35px;
+    &__container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      max-width: 390px;
+    }
+  }
+
+  .popular,
+  .how,
+  .made {
+    h3 {
+      font-size: 22px;
+      font-weight: 600;
+      line-height: 36px;
+      margin-left: 26px;
+    }
+    p {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 24px;
+      margin-left: 26px;
+      max-width: 400px;
+    }
+  }
+
+  .popular__container {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    justify-content: center;
+    align-items: center;
+    gap: 1px;
+    &__img {
+      margin-bottom: 60px;
+    }
+    img {
+      width: 160px;
+      height: 160px;
+    }
+    h6 {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 22px;
+    }
+    #miami {
+      display: none;
+    }
+  }
+
+  .how__container,
+  .made__content {
+    flex-direction: column;
+    max-width: 400px;
+    margin-left: 26px;
+    gap: 0;
+    &__box {
+      align-items: flex-start;
+      max-width: 390px;
+      max-height: 120px;
+      margin-bottom: 12px;
+      h4 {
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 17px;
+      }
+      p {
+        font-size: 11px;
+        font-weight: 400;
+        line-height: 16px;
+        max-width: 250px;
+      }
+      img {
+        width: 28px;
+        height: 80px;
+      }
+      a {
+        font-size: 11px;
+      }
+      &__links {
+        padding: 20px 0 15px 0;
+      }
+    }
+    &__post {
+      margin-bottom: 45px;
+      img {
+        width: 400px;
+        height: 200px;
+      }
+      h4 {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 28px;
+        max-width: 300px;
+      }
+      p {
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 24px;
+        max-width: 380px;
+      }
+      a {
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 24px;
       }
     }
   }
