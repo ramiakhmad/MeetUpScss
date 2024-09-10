@@ -67,25 +67,70 @@ const eventsStore = [
     distance: 15,
   },
 ];
-
 function displayEvents() {
   const container = document.getElementById("events-container");
+  container.innerHTML = "";
 
-  eventsStore.forEach((event) => {
+  const eventTypeFilter = document.getElementById("event-type").value;
+  const eventDistanceFilter = document.getElementById("event-distance").value;
+  const eventCategoryFilter = document.getElementById("event-category").value;
+  const searchText = document
+    .getElementById("search-input")
+    .value.toLowerCase();
+
+  const filteredEvents = eventsStore.filter((event) => {
+    const matchesType =
+      eventTypeFilter === "all" || event.type === eventTypeFilter;
+    const matchesDistance =
+      eventDistanceFilter === "any" ||
+      event.distance <= parseInt(eventDistanceFilter);
+    const matchesCategory =
+      eventCategoryFilter === "all" || event.category === eventCategoryFilter;
+
+    const matchesSearchText =
+      event.title.toLowerCase().includes(searchText) ||
+      event.description.toLowerCase().includes(searchText);
+
+    return (
+      matchesType && matchesDistance && matchesCategory && matchesSearchText
+    );
+  });
+
+  const totalAttendees = filteredEvents.reduce(
+    (total, event) => total + event.attendees,
+    0
+  );
+
+  filteredEvents.forEach((event) => {
     const eventElement = document.createElement("div");
     eventElement.className = "events__container__event";
 
     eventElement.innerHTML = `
-            <img src="${event.image}" alt="${event.description}" />
-            <div class = 'events__container__event__des'>
-            <p>${event.date.toLocaleString()}</P>
-            <h5>${event.title}</h5>
-            <p> ${event.category} (${event.distance} km)</p>
-            </div>
-        `;
+      <img src="${event.image}" alt="${event.description}" />
+      <div class="events__container__event__des">
+        <p>${event.date.toLocaleString()}</p>
+        <h5>${event.title}</h5>
+        <p>${event.category} (${event.distance} км)</p>
+      </div>
+    `;
     container.appendChild(eventElement);
   });
+
+  const totalAttendeesElement = document.createElement("div");
+  totalAttendeesElement.className = "events__container__total";
+  totalAttendeesElement.innerHTML = `<p>${totalAttendees} attendees</p>`;
+  container.appendChild(totalAttendeesElement);
 }
 
-// Вызов функции для отображения событий при загрузке страницы
+document.getElementById("event-type").addEventListener("change", displayEvents);
+document
+  .getElementById("event-distance")
+  .addEventListener("change", displayEvents);
+document
+  .getElementById("event-category")
+  .addEventListener("change", displayEvents);
+document
+  .getElementById("search-input")
+  .addEventListener("input", displayEvents);
+
 window.onload = displayEvents;

@@ -15,7 +15,7 @@
         <div class="header__left__searchbar">
           <div class="header__left__searchbar__left">
             <img src="./assets/img/search.svg" alt="search__events" />
-            <input type="text" placeholder="Search events" />
+            <input type="text" id="search-input" placeholder="Search events" />
           </div>
           <div class="header__left__searchbar__right">
             <input type="text" placeholder="Mountain View, CA" />
@@ -34,8 +34,55 @@
         <button>Singup</button>
       </div>
     </header>
-    <main>
-        <div id="events-container" class="events__container"></div>
+    <main class="main">
+      <div class="main__left">
+        <div class="pagetitel"><h2>Events near New York, NY</h2></div>
+        <div class="events__container">
+          <div class="events-block">
+            <div class="events-title">Events</div>
+            <div class="events__filters">
+              <div class="filter">
+                <select id="event-type">
+                  <option value="all">Any type <img src="" alt="" /></option>
+                  <option value="offline">offline</option>
+                  <option value="online">online</option>
+                </select>
+              </div>
+              <div class="filter">
+                <select id="event-distance">
+                  <option value="any">
+                    Any distance <img src="" alt="" />
+                  </option>
+                  <option value="5">5 km</option>
+                  <option value="25">25 km</option>
+                  <option value="50">50 km</option>
+                  <option value="100">100 km</option>
+                </select>
+              </div>
+              <div class="filter">
+                <select id="event-category">
+                  <option value="all">Any category</option>
+                  <option value="Hobbies and Passions">
+                    Hobbies and Passions
+                  </option>
+                  <option value="Technology">Technology</option>
+                  <option value="Business">Business</option>
+                  <option value="Social Activities">Social Activities</option>
+                  <option value="Health and Wellbeing">
+                    Health and Wellbeing
+                  </option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div id="events-container"></div>
+        </div>
+      </div>
+      <div class="main__right">
+        <p id="right">Find events near</p>
+        <h3>New York, NY</h3>
+        <img src="./assets/img/map.png" alt="map">
+      </div>
     </main>
     <footer class="footer">
       <div class="footer__create">
@@ -98,9 +145,7 @@
               alt="Get it on Google Play"
           /></a>
           <a href="#"
-            ><img
-              src="/assets/img/app__store.svg"
-              alt="Download on the App Store"
+            ><img src="/assets/img/app.svg" alt="Download on the App Store"
           /></a>
         </div>
       </div>
