@@ -407,8 +407,10 @@
           color: #00798a;
           border-bottom: 4px solid #00798a;
           max-width: 64px;
+          margin-left: -21px;
         }
         &__filters {
+          margin-left: -21px;
           display: flex;
           gap: 18px;
           &__filter {
@@ -556,7 +558,7 @@
   }
   .online {
     &__tabs {
-      margin-left: -90px;
+      margin-left: -140px;
       gap: 0;
       &__left {
         gap: 5px;
@@ -599,7 +601,7 @@
     display: none;
   }
   .explore {
-    margin-left: 32px;
+    margin-left: 21px;
     &__contanier {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -814,10 +816,19 @@
         }
       }
     }
+    &__a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 22px;
+      a {
+        color: #00798a;
+      }
+    }
   }
   .online {
     &__tabs {
-      margin-left: -90px;
+      margin-left: -140px;
       gap: 0;
       &__left {
         gap: 5px;
@@ -855,12 +866,21 @@
         }
       }
     }
+    &__a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 22px;
+      a {
+        color: #00798a;
+      }
+    }
   }
   .join {
     display: none;
   }
   .explore {
-    margin-left: 32px;
+    margin-left: 21px;
     &__contanier {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -996,19 +1016,34 @@
       &__events {
         &__block {
           margin: 16px 20% 40px 5%;
+          &__filters {
+            margin-left: -11px;
+          }
         }
       }
-      &__container{
+      &__container {
         margin: 0;
         margin-bottom: 68px;
-        &__event{
+        &__event {
+          margin-top: -11px;
           max-width: 370px;
+          img {
+            width: 98px;
+            height: 55px;
+          }
+          p {
+            font-size: 9px;
+            font-weight: 500;
+            line-height: 15px;
+          }
+          h5 {
+            font-size: 10px;
+          }
         }
-        &__total{
+        &__total {
           display: none;
         }
       }
-      
     }
     &__right {
       display: none;
