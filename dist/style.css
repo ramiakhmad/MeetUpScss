@@ -514,6 +514,9 @@ p {
   flex-direction: row;
   gap: 16px;
 }
+.events__a {
+  display: none;
+}
 
 .online {
   display: flex;
@@ -560,6 +563,9 @@ p {
   display: flex;
   flex-direction: row;
   gap: 16px;
+}
+.online__a {
+  display: none;
 }
 
 .join {
@@ -615,6 +621,10 @@ p {
 .joinright img {
   width: 341px;
   height: 196px;
+}
+
+.joinMobile {
+  display: none;
 }
 
 .explore {
@@ -865,6 +875,9 @@ p {
   font-size: 16px;
   font-weight: 500;
 }
+.main__left__container__event__des__date {
+  color: #7c6f50;
+}
 .main__left__container__event img {
   width: 160px;
   height: 105px;
@@ -989,6 +1002,57 @@ p {
   }
   .join {
     display: none;
+  }
+  .joinMobile {
+    margin-top: 30px;
+    margin-bottom: 32px;
+    margin-left: 12px;
+    display: flex;
+    align-items: center;
+    width: 390px;
+    height: 356px;
+    padding: 16px 0 32px 15px;
+    position: relative;
+  }
+  .joinMobile ::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 8%;
+    background: #97cad1;
+    border-radius: 8px;
+    z-index: -1;
+  }
+  .joinMobile h3 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 36px;
+  }
+  .joinMobile img {
+    max-width: 240px;
+    height: 140px;
+    margin-left: 65px;
+  }
+  .joinMobile p {
+    color: #000000;
+    max-width: 350px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-top: 7px;
+  }
+  .joinMobile button {
+    width: 192px;
+    height: 40px;
+    color: white;
+    background: #e32359;
+    border: none;
+    border-radius: 8px;
+    margin-left: 88px;
+    margin-top: 22px;
   }
   .explore {
     margin-left: 21px;
@@ -1243,6 +1307,57 @@ p {
   }
   .join {
     display: none;
+  }
+  .joinMobile {
+    margin-top: 30px;
+    margin-bottom: 32px;
+    margin-left: 12px;
+    display: flex;
+    align-items: center;
+    width: 390px;
+    height: 356px;
+    padding: 16px 0 32px 15px;
+    position: relative;
+  }
+  .joinMobile ::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 8%;
+    background: #97cad1;
+    border-radius: 8px;
+    z-index: -1;
+  }
+  .joinMobile h3 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 36px;
+  }
+  .joinMobile img {
+    max-width: 240px;
+    height: 140px;
+    margin-left: 65px;
+  }
+  .joinMobile p {
+    color: #000000;
+    max-width: 350px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-top: 7px;
+  }
+  .joinMobile button {
+    width: 192px;
+    height: 40px;
+    color: white;
+    background: #e32359;
+    border: none;
+    border-radius: 8px;
+    margin-left: 88px;
+    margin-top: 22px;
   }
   .explore {
     margin-left: 21px;

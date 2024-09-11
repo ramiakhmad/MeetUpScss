@@ -74,9 +74,9 @@ function displayEvents() {
   const eventTypeFilter = document.getElementById("event-type").value;
   const eventDistanceFilter = document.getElementById("event-distance").value;
   const eventCategoryFilter = document.getElementById("event-category").value;
-  const searchText = document
-    .getElementById("search-input")
-    .value.toLowerCase();
+  const searchText =
+    document.getElementById("search-input").value.toLowerCase() +
+    document.getElementById("search-input-mobile").value.toLowerCase();
 
   const filteredEvents = eventsStore.filter((event) => {
     const matchesType =
@@ -86,10 +86,11 @@ function displayEvents() {
       event.distance <= parseInt(eventDistanceFilter);
     const matchesCategory =
       eventCategoryFilter === "all" || event.category === eventCategoryFilter;
-
+    const eventDistanceStr = event.distance.toString();
     const matchesSearchText =
       event.title.toLowerCase().includes(searchText) ||
-      event.description.toLowerCase().includes(searchText);
+      event.description.toLowerCase().includes(searchText) ||
+      eventDistanceStr.includes(searchText);
 
     return (
       matchesType && matchesDistance && matchesCategory && matchesSearchText
@@ -108,7 +109,7 @@ function displayEvents() {
     eventElement.innerHTML = `
       <img src="${event.image}" alt="${event.description}" />
       <div class="main__left__container__event__des">
-        <p>${event.date.toLocaleString()}</p>
+        <p class="main__left__container__event__des__date">${event.date.toLocaleString()}</p>
         <h5>${event.title}</h5>
         <p>${event.category} (${event.distance} км)</p>
       </div>
@@ -131,6 +132,9 @@ document
   .addEventListener("change", displayEvents);
 document
   .getElementById("search-input")
+  .addEventListener("input", displayEvents);
+document
+  .getElementById("search-input-mobile")
   .addEventListener("input", displayEvents);
 
 window.onload = displayEvents;
