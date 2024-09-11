@@ -86,11 +86,16 @@ function displayEvents() {
       event.distance <= parseInt(eventDistanceFilter);
     const matchesCategory =
       eventCategoryFilter === "all" || event.category === eventCategoryFilter;
+    const eventTitle = event.title.toLowerCase();
+    const eventDes = event.description.toLowerCase();
     const eventDistanceStr = event.distance.toString();
+    const eventDate = event.date.toString();
+
     const matchesSearchText =
-      event.title.toLowerCase().includes(searchText) ||
-      event.description.toLowerCase().includes(searchText) ||
-      eventDistanceStr.includes(searchText);
+      eventTitle.includes(searchText) ||
+      eventDes.includes(searchText) ||
+      eventDistanceStr.includes(searchText) ||
+      eventDate.includes(searchText);
 
     return (
       matchesType && matchesDistance && matchesCategory && matchesSearchText

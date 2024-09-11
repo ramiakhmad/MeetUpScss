@@ -68,6 +68,9 @@
       gap: 22px;
       a {
         color: black;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
       }
       button {
         width: 85px;
@@ -76,6 +79,9 @@
         color: white;
         border-radius: 8px;
         border: none;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
       }
       &__nav {
         display: flex;
@@ -163,6 +169,10 @@
     &__apps {
       display: flex;
       gap: 12px;
+      img{
+        width: 140px;
+        height: 40px;
+      }
     }
   }
   &__bottom {

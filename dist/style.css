@@ -78,6 +78,9 @@ p {
 }
 .header__desktop__right a {
   color: black;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
 }
 .header__desktop__right button {
   width: 85px;
@@ -86,6 +89,9 @@ p {
   color: white;
   border-radius: 8px;
   border: none;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
 }
 .header__desktop__right__nav {
   display: flex;
@@ -168,6 +174,10 @@ p {
 .footer__followapps__apps {
   display: flex;
   gap: 12px;
+}
+.footer__followapps__apps img {
+  width: 140px;
+  height: 40px;
 }
 .footer__bottom {
   margin: 24px 20% 24px 20%;
@@ -441,6 +451,12 @@ p {
   background: #00798a;
   color: white;
   margin-bottom: 99px;
+}
+.intro__left button a {
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
 }
 .intro__right img {
   width: 380px;
