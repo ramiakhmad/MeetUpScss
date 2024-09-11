@@ -8,47 +8,67 @@
   </head>
   <body>
     <header class="header">
-      <div class="header__left">
-        <a href="index.html">
-          <img src="./assets/img/Meetup__logo.svg" alt="MeetUp" />
-        </a>
-        <div class="header__left__searchbar">
-          <div class="header__left__searchbar__left">
-            <img src="./assets/img/search.svg" alt="search__events" />
-            <input type="text" id="search-input" placeholder="Search events" />
+      <div class="header__desktop">
+        <div class="header__desktop__left">
+          <a href="index.html">
+            <img src="./assets/img/Meetup__logo.svg" alt="MeetUp" />
+          </a>
+          <div class="header__desktop__left__searchbar">
+            <div class="header__desktop__left__searchbar__left">
+              <img src="./assets/img/search.svg" alt="search__events" />
+              <input
+                type="text"
+                id="search-input"
+                placeholder="Search events"
+              />
+            </div>
+            <div class="header__desktop__left__searchbar__right">
+              <input type="text" placeholder="Mountain View, CA" />
+              <button id="search-button">
+                <img
+                  src="./assets/img/search__button.svg"
+                  alt="search__button"
+                />
+              </button>
+            </div>
           </div>
-          <div class="header__left__searchbar__right">
-            <input type="text" placeholder="Mountain View, CA" />
-            <button>
-              <img src="./assets/img/search__button.svg" alt="search__button" />
-            </button>
+        </div>
+        <div class="header__desktop__right">
+          <div class="header__desktop__right__nav">
+            <img src="./assets/img/lang.svg" alt="" />
+            <a href="#">English</a>
           </div>
+          <a href="#">Login</a>
+          <button>Singup</button>
         </div>
       </div>
-      <div class="header__right">
-        <div class="header__right__nav">
-          <img src="./assets/img/lang.svg" alt="" />
-          <a href="#">English</a>
+      <div class="header__searchbar" id="searchbar">
+        <div class="header__searchbar__left">
+          <img src="./assets/img/search.svg" alt="search__events" />
+          <input type="text" id="search-input" placeholder="Search events" />
         </div>
-        <a href="#">Login</a>
-        <button>Singup</button>
+        <div class="header__searchbar__right">
+          <button id="search-button">
+            <img src="./assets/img/search__button.svg" alt="search__button" />
+          </button>
+        </div>
       </div>
     </header>
     <main class="main">
       <div class="main__left">
-        <div class="pagetitel"><h2>Events near New York, NY</h2></div>
-        <div class="events__container">
-          <div class="events-block">
-            <div class="events-title">Events</div>
-            <div class="events__filters">
-              <div class="filter">
+        <div class="main__left__pagetitel"><h2>Events near New York, NY</h2></div>
+        <div class="main__left__events">
+          <div class="main__left__events__block">
+            <div class="main__left__events__block__title">Events</div>
+            <div class="main__left__events__block__filters">
+              <div class="main__left__events__block__filters__filter">
                 <select id="event-type">
                   <option value="all">Any type <img src="" alt="" /></option>
                   <option value="offline">offline</option>
                   <option value="online">online</option>
                 </select>
               </div>
-              <div class="filter">
+              <div class="main__left__events__block__filters__filter">
                 <select id="event-distance">
                   <option value="any">
                     Any distance <img src="" alt="" />
@@ -59,7 +79,7 @@
                   <option value="100">100 km</option>
                 </select>
               </div>
-              <div class="filter">
+              <div class="main__left__events__block__filters__filter">
                 <select id="event-category">
                   <option value="all">Any category</option>
                   <option value="Hobbies and Passions">
@@ -75,7 +95,7 @@
               </div>
             </div>
           </div>
-          <div id="events-container"></div>
+          <div class="main__left__container" id="events-container"></div>
         </div>
       </div>
       <div class="main__right">

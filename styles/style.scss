@@ -385,42 +385,86 @@
     }
   }
 }
-#events-container {
-  margin: 24px 0 24px 15%;
-}
-.events__container {
-  display: flex;
-  flex-direction: column;
-  max-width: 610px;
-
-  &__event {
-    padding: 16px 0 40px 0;
-    max-width: 605px;
-    margin-top: 16px;
-    border-top: 1px solid #d9d9d9;
-    display: flex;
-    gap: 12px;
-    &__des {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-      h5 {
-        max-width: 380px;
-        font-size: 16px;
-        font-weight: 500;
-      }
-    }
-    img {
-      width: 160px;
-      height: 105px;
-      border-radius: 8px;
-    }
-  }
-}
 .main {
   display: flex;
   justify-content: center;
   gap: 356px;
+  &__left {
+    &__pagetitel {
+      margin: 77px 20% 24px 17%;
+      h2 {
+        font-size: 28px;
+        font-weight: 600;
+      }
+    }
+    &__events {
+      &__block {
+        max-width: 990px;
+        margin: 24px 20% 24px 20%;
+        &__title {
+          font-size: 20px;
+          margin-bottom: 12px;
+          color: #00798a;
+          border-bottom: 4px solid #00798a;
+          max-width: 64px;
+        }
+        &__filters {
+          display: flex;
+          gap: 18px;
+          &__filter {
+            margin-bottom: 10px;
+            width: 108%;
+            padding: 5px;
+            margin: 5px 0;
+            select {
+              background: #f6f7f8;
+              border: none;
+              border-radius: 25px;
+              height: 46px;
+              max-width: 114px;
+              text-align: center;
+              font-size: 14px;
+              font-weight: 500;
+            }
+          }
+        }
+      }
+      &__total {
+        width: 150px;
+        margin: 0 auto;
+      }
+    }
+    &__container {
+      margin: 24px 0 24px 15%;
+      display: flex;
+      flex-direction: column;
+      max-width: 610px;
+
+      &__event {
+        padding: 16px 0 40px 0;
+        max-width: 605px;
+        margin-top: 16px;
+        border-top: 1px solid #d9d9d9;
+        display: flex;
+        gap: 12px;
+        &__des {
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+          h5 {
+            max-width: 380px;
+            font-size: 16px;
+            font-weight: 500;
+          }
+        }
+        img {
+          width: 160px;
+          height: 105px;
+          border-radius: 8px;
+        }
+      }
+    }
+  }
   &__right {
     margin-top: 81px;
     #right {
@@ -437,58 +481,12 @@
     }
   }
 }
-.pagetitel {
-  margin: 77px 20% 24px 17%;
-  h2 {
-    font-size: 28px;
-    font-weight: 600;
-  }
-}
-.events__container {
-  &__total {
-    width: 150px;
-    margin: 0 auto;
-  }
-}
-
-.events-block {
-  max-width: 990px;
-  margin: 24px 20% 24px 20%;
-}
-.events-title {
-  font-size: 20px;
-  margin-bottom: 12px;
-  color: #00798a;
-  border-bottom: 4px solid #00798a;
-  max-width: 64px;
-}
-.events__filters {
-  display: flex;
-  gap: 18px;
-}
-.filter {
-  margin-bottom: 10px;
-  select {
-    background: #f6f7f8;
-    border: none;
-    border-radius: 25px;
-    height: 46px;
-    max-width: 114px;
-    text-align: center;
-    font-size: 14px;
-    font-weight: 500;
-  }
-}
-.filter select {
-  width: 108%;
-  padding: 5px;
-  margin: 5px 0;
-}
 
 @media (max-width: 393px) {
   .intro {
     flex-direction: column;
     gap: 10px;
+    margin-top: 30px;
     &__left {
       h3 {
         font-size: 25px;
@@ -596,6 +594,9 @@
         }
       }
     }
+  }
+  .join {
+    display: none;
   }
   .explore {
     margin-left: 32px;
@@ -724,12 +725,28 @@
           line-height: 23px;
         }
       }
+    }
+  }
+  .main {
+    &__left {
+      &__pagetitel {
+        margin: 22px 20% 10px 5%;
+      }
+      &__events {
+        &__block {
+          margin: 16px 20% 40px 5%;
+        }
+      }
+    }
+    &__right {
+      display: none;
     }
   }
 }
 @media (max-width: 430px) {
   .intro {
     flex-direction: column;
+    margin-top: 30px;
     gap: 10px;
     &__left {
       h3 {
@@ -838,6 +855,9 @@
         }
       }
     }
+  }
+  .join {
+    display: none;
   }
   .explore {
     margin-left: 32px;
@@ -966,6 +986,32 @@
           line-height: 23px;
         }
       }
+    }
+  }
+  .main {
+    &__left {
+      &__pagetitel {
+        margin: 22px 20% 10px 5%;
+      }
+      &__events {
+        &__block {
+          margin: 16px 20% 40px 5%;
+        }
+      }
+      &__container{
+        margin: 0;
+        margin-bottom: 68px;
+        &__event{
+          max-width: 370px;
+        }
+        &__total{
+          display: none;
+        }
+      }
+      
+    }
+    &__right {
+      display: none;
     }
   }
 }

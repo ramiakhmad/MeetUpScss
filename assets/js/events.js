@@ -103,11 +103,11 @@ function displayEvents() {
 
   filteredEvents.forEach((event) => {
     const eventElement = document.createElement("div");
-    eventElement.className = "events__container__event";
+    eventElement.className = "main__left__container__event";
 
     eventElement.innerHTML = `
       <img src="${event.image}" alt="${event.description}" />
-      <div class="events__container__event__des">
+      <div class="main__left__container__event__des">
         <p>${event.date.toLocaleString()}</p>
         <h5>${event.title}</h5>
         <p>${event.category} (${event.distance} км)</p>
@@ -117,7 +117,7 @@ function displayEvents() {
   });
 
   const totalAttendeesElement = document.createElement("div");
-  totalAttendeesElement.className = "events__container__total";
+  totalAttendeesElement.className = "main__left__container__total";
   totalAttendeesElement.innerHTML = `<p>${totalAttendees} attendees</p>`;
   container.appendChild(totalAttendeesElement);
 }
