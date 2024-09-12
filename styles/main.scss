@@ -198,13 +198,17 @@
     justify-content: center;
     align-items: center;
     gap: 11px;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    background: white;
     &__desktop {
-      gap: 60px;
+      width: 100%;
+      gap: 85px;
       &__left {
         img {
           width: 95px;
           height: 34px;
-          padding: 5px 0 5px 5px;
         }
         &__searchbar {
           display: none;
@@ -246,6 +250,7 @@
         img {
           width: 22px;
           height: 22px;
+          padding: 5px 0 5px 5px;
         }
         input {
           width: 300px;
@@ -291,11 +296,12 @@
     }
     &__section {
       margin: 20px 0 0 18px;
-      width: 350px;
-      gap: 20px;
-      font-size: 16px;
+      display: flex;
+      gap: 10px;
+      width: 377px;
+      font-size: 14px;
       font-weight: 400;
-      line-height: 24px;
+      line-height: 20px;
     }
     &__followapps {
       margin: 20px 0 0 18px;
@@ -324,7 +330,7 @@
     background: white;
     &__desktop {
       width: 100%;
-      gap: 95px;
+      gap: 85px;
       &__left {
         img {
           width: 95px;
@@ -416,11 +422,12 @@
     }
     &__section {
       margin: 20px 0 0 18px;
-      width: 350px;
-      gap: 20px;
-      font-size: 16px;
+      display: flex;
+      gap: 10px;
+      width: 377px;
+      font-size: 14px;
       font-weight: 400;
-      line-height: 24px;
+      line-height: 20px;
     }
     &__followapps {
       margin: 20px 0 0 18px;
@@ -429,7 +436,7 @@
       }
     }
     &__bottom {
-      margin: 20px 0 0 18px;
+      margin: 20px 0 36px 18px;
       a {
         display: none;
       }

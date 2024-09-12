@@ -45,7 +45,11 @@
       <div class="header__searchbar" id="searchbar">
         <div class="header__searchbar__left">
           <img src="./assets/img/search.svg" alt="search__events" />
-          <input type="text" id="search-input-mobile" placeholder="Search events" />
+          <input
+            type="text"
+            id="search-input-mobile"
+            placeholder="Search events"
+          />
         </div>
         <div class="header__searchbar__right">
           <button id="search-button">
@@ -56,14 +60,16 @@
     </header>
     <main class="main">
       <div class="main__left">
-        <div class="main__left__pagetitel"><h2>Events near New York, NY</h2></div>
+        <div class="main__left__pagetitel">
+          <h2>Events near New York, NY</h2>
+        </div>
         <div class="main__left__events">
           <div class="main__left__events__block">
             <div class="main__left__events__block__title">Events</div>
             <div class="main__left__events__block__filters">
               <div class="main__left__events__block__filters__filter">
                 <select id="event-type">
-                  <option value="all">Any type <img src="" alt="" /></option>
+                  <option value="all">Any type</option>
                   <option value="offline">offline</option>
                   <option value="online">online</option>
                 </select>
@@ -93,7 +99,6 @@
                   </option>
                 </select>
               </div>
-            </div>
           </div>
           <div class="main__left__container" id="events-container"></div>
         </div>
@@ -101,7 +106,15 @@
       <div class="main__right">
         <p id="right">Find events near</p>
         <h3>New York, NY</h3>
-        <img src="./assets/img/map.png" alt="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20352.37309739455!2d-74.12609478536781!3d40.687223437183114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2z0J3RjNGOLdCZ0L7RgNC6LCDQodC_0L7Qu9GD0YfQtdC90ZYg0KjRgtCw0YLQuCDQkNC80LXRgNC40LrQuA!5e0!3m2!1suk!2sde!4v1726062618554!5m2!1suk!2sde"
+          width="350"
+          height="285"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
       </div>
     </main>
     <footer class="footer">
@@ -165,7 +178,9 @@
               alt="Get it on Google Play"
           /></a>
           <a href="#"
-            ><img src="/assets/img/appStore.png" alt="Download on the App Store"
+            ><img
+              src="/assets/img/appStore.png"
+              alt="Download on the App Store"
           /></a>
         </div>
       </div>
