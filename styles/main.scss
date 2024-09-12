@@ -4,6 +4,7 @@
   font-family: "Roboto", sans-serif;
 }
 .header {
+  max-width: 100%s;
   &__desktop {
     display: flex;
     justify-content: space-between;
@@ -26,6 +27,7 @@
           img {
             width: 22px;
             height: 22px;
+            padding: 5px 0 5px 5px;
           }
           input {
             width: 300px;
@@ -124,9 +126,10 @@
     }
   }
   &__section {
-    display: flex;
+    display: grid;
     margin: 24px 20% 24px 20%;
-    gap: 360px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 200px;
     &__links {
       display: flex;
       flex-direction: column;
@@ -169,7 +172,7 @@
     &__apps {
       display: flex;
       gap: 12px;
-      img{
+      img {
         width: 140px;
         height: 40px;
       }
@@ -201,6 +204,7 @@
         img {
           width: 95px;
           height: 34px;
+          padding: 5px 0 5px 5px;
         }
         &__searchbar {
           display: none;
@@ -277,7 +281,7 @@
   }
   .footer {
     &__create {
-      margin: 20px 0 0 18px;
+      margin: 42px 0 0 18px;
       border: none;
       h6 {
         padding-top: 30px;
@@ -287,7 +291,7 @@
     }
     &__section {
       margin: 20px 0 0 18px;
-      width: 378px;
+      width: 350px;
       gap: 20px;
       font-size: 16px;
       font-weight: 400;
@@ -314,8 +318,13 @@
     justify-content: center;
     align-items: center;
     gap: 11px;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    background: white;
     &__desktop {
-      gap: 60px;
+      width: 100%;
+      gap: 95px;
       &__left {
         img {
           width: 95px;
@@ -361,6 +370,7 @@
         img {
           width: 22px;
           height: 22px;
+          padding: 5px 0 5px 5px;
         }
         input {
           width: 300px;
@@ -396,7 +406,7 @@
   }
   .footer {
     &__create {
-      margin: 20px 0 0 18px;
+      margin: 42px 0 0 18px;
       border: none;
       h6 {
         padding-top: 30px;
@@ -406,7 +416,7 @@
     }
     &__section {
       margin: 20px 0 0 18px;
-      width: 378px;
+      width: 350px;
       gap: 20px;
       font-size: 16px;
       font-weight: 400;
