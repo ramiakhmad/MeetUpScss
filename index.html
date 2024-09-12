@@ -13,6 +13,32 @@
     <title>MeetUp</title>
   </head>
   <body>
+    <div class="modal">
+      <div class="modal__container">
+        <button id="btn-close" class="modal__container__btn">x</button>
+        <div class="modal__container__content">
+          <img src="./assets/img/modal/Meetup_Logo.png" alt="" />
+          <h3>Sign up</h3>
+          <p>Already a member? <a href="#">Log in</a></p>
+          <div class="modal__container__brand">
+            <img src="./assets/img/modal/facebook.svg" alt="facebook" />
+            <p>Continue with Facebook</p>
+          </div>
+          <div class="modal__container__brand">
+            <img src="./assets/img/modal/google.svg" alt="Google" />
+            <p>Continue with Google</p>
+          </div>
+          <div class="modal__container__brand">
+            <img src="./assets/img/modal/apple.svg" alt="apple" />
+            <p>Continue with Apple</p>
+          </div>
+          <div class="modal__container__brand">
+            <img src="./assets/img/modal/email.svg" alt="Email" />
+            <p>Continue with Email</p>
+          </div>
+        </div>
+      </div>
+    </div>
     <header class="header">
       <div class="header__desktop">
         <div class="header__desktop__left">
@@ -45,7 +71,7 @@
             <a href="#">English</a>
           </div>
           <a href="#">Login</a>
-          <button>Singup</button>
+          <button id="btn-modal">Singup</button>
         </div>
       </div>
       <div class="header__searchbar" id="searchbar">
@@ -436,12 +462,13 @@
             support, get out of their comfort zones, and pursue their passions,
             together. Membership is free.
           </p>
-          <button>Sign up</button>
+          <button id="btn-modal">Sign up</button>
         </div>
         <div class="join__right">
           <img src="./assets/img/join__meetup.svg" alt="" />
         </div>
       </section>
+
       <section class="joinMobile">
         <div class="joinMobile__left">
           <h3>Join Meetup</h3>
